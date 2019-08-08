@@ -9,6 +9,11 @@ public class ThreadExample {
 
         Thread thread2 = new Thread(()->threadExample.printNum());
         thread2.start();
+
+        Thread thread3 = new Thread(()-> {
+            threadExample.printNum();
+        });
+        thread3.start();
     }
 
     void printNum()
